@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="table.css">
+
+</head>
+<body>
+
+<h1>Autos</h1>
+
+<main>
+    <section>
+        <form action="https://it.bzz.ch/demo/formdata/index.php">
+
+            <fieldset>
+                <legend>Anreise <strong>Auswahlliste single</strong></legend>
+                <select name="anreise" size="5">
+                    <option>Auto</option>
+                    <option>Zug</option>
+                    <option>Bus</option>
+                    <option>Fahrrad</option>
+                    <option>Schiff</option>
+                </select>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Hotelzimmer <strong>Auswahlliste Multiple</strong></legend>
+                <select id="zimmertyp" name="zimmertyp[]" multiple required>
+                    <option value="einzelzimmer">Einzelzimmer</option>
+                    <option value="doppelzimmer">Doppelzimmer</option>
+                    <option value="suite">Suite</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Zusatzleistungen <strong>Checkbox</strong></legend>
+                <input type="checkbox" name="zusatzleistungen[]" value="fruehstueck" id="check1" checked>
+                <label for="check1">Frühstück</label>
+                <input type="checkbox" name="zusatzleistungen[]" value="taxi" id="check2">
+                <label for="check2">Taxi</label>
+                <input type="checkbox" name="zusatzleistungen[]" value="spa" id="check3">
+                <label for="check3">Spa</label>
+                <input type="checkbox" name="zusatzleistungen[]" value="sauna" id="check4">
+                <label for="check4">Sauna</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Karten <strong>Radiobutton</strong></legend>
+                <input type="radio" id="mc" name="zahlmethode" value="Mastercard">
+                <label for="mc"> Mastercard</label>
+                <input type="radio" id="vi" name="zahlmethode" value="Visa">
+                <label for="vi"> Visa</label>
+                <input type="radio" id="ae" name="zahlmethode" value="AmericanExpress">
+                <label for="ae"> American Express</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Vögel <strong>DataList</strong></legend>
+                <input type="search" list="Voegel" name="voegel"/>
+                <datalist id="Voegel">
+                    <option value="Amsel">
+                    <option value="Buntspecht">
+                    <option value="Drossel">
+                    <option value="Eisvogel">
+                    <option value="Fink">
+                    <option value="Graugans">
+                    <option value="Meise">
+                    <option value="Spatz">
+                    <option value="Specht">
+                </datalist>
+            </fieldset>
+            <button type="submit">Submit</button>
+        </form>
+
+    </section>
+</main>
+
+<footer>
+
+</footer>
+</body>
+</html>
